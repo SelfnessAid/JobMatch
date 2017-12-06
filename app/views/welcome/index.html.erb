@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<%= stylesheet_link_tag "index" %>
+</head>
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand page-scroll" href="/">
+					<%= image_tag "logo-small.png" %>
+				</a>
+            </div>
+            <div class="post-job-btn">
+				<a href="/sign-up/recruiters" class="btn btn-primary btn-xl page-scroll navbar-right">
+				<span>Employers</span>Post Job & Find Talent</a>
+				<ul class="nav navbar-nav navbar-right account_sec">
+					<li class="dropdown">
+					
+					<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+						<%= image_tag "user-header.png" %>Login<b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<form action="/" method="post">
+								<div class="custom__form">
+									<div class="form-item">
+										<input class="form-input form-input_big" type="email" required="required" placeholder="Email" name="_username" value="" autofocus/>
+									</div>
+									<div class="form-item">
+										<input class="form-input form-input_big" type="password" required="required" placeholder="Password" name="_password"/>
+									</div>
+									<div class="form-item">
+										
+										<a href="/forgot-password" class="password-link">Forgot password?</a>
+										<input type="hidden" name="_csrf_token" value="AA0zGyxl1BotlKGx8dF9flY73cVqAPne-XYQFQflGCc">
+										<button class="btn btn-primary" type="submit">Sign In</button>
+										
+										</div>
+									</div>
+								</form>
+							</li>
+						</ul>
+					</li>
+				</ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h2 id="homeHeading">Take Your Job Search Strategy to the Next Level</h2>
+                <hr>
+                <h4>Beat the system filters & get employers to pick your CV</h4>
+            </div>
+			<div class="container">
+				<div class="row outer_level_sec">
+					<div class="col-md-3 col-sm-6 progress_level">
+						<h3>Improve your chances of getting your CV among the selected pool of applicants</h3>
+						<div class="">
+							<%= image_tag "graph.png" %>
+						</div>
+						<h2>Get your score over 80% and stand out from the sea of other job hunters</h2>
+					</div>
+					<div class="col-md-9 col-sm-6 other_level">
+						<h2 class="text-center">How it Works</h2>
+						<ul class="how_it_work">
+							<li>
+							    <a href="/app">
+									<i class="fa fa-upload" aria-hidden="true"></i>
+									<p>Upload CV</p>
+								</a>
+							</li>
+							<li>
+							    <a href="/app">
+									<i class="fa fa-search" aria-hidden="true"></i>
+									<p>Search for jobs</p>
+								</a>
+							</li>
+							<li>
+								<i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+								<p>View your Match Rate Report against job description</p>
+							</li>
+							<li>
+								<i class="fa fa-wrench" aria-hidden="true"></i>
+								<p>Amend weaknesses on your CV</p>
+							</li>
+							<li>
+								<i class="fa fa-file-word-o" aria-hidden="true"></i>
+								<p>Apply for jobs with confidence</p>
+							</li>
+						</ul>
+						<a class="btn btn-default btn-xl sr-button" href="/app" target="_blank">Get my score &amp; apply for jobs with confidence</a>
+					</div>
+				</div>
+			</div>
+        </div>
+    </header>
+
+    <section class="bg-primary search-job-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">We work with UK's leading employers & job boards</h2>
+                    <hr class="light">
+                    <h3 class="text-faded">Search <span>85 000</span> live jobs today</h3>
+					<ul class="jobs_provider owl-carousel">
+						<li class="item"><%= image_tag "cv-library_logo.png" %></li>
+						<li class="item"><%= image_tag "indeed_logo.png" %></li>
+						<li class="item"><%= image_tag "monster_logo.png" %></li>
+					</ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Why Use Job Match Rate?</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 text-center why_match_rate">
+                   Jobmatchrate is a free online service built on the same algorithm used by Applicant Tracking System (ATS) and popular Job boards to rank and score your CV against job descriptions during employer and recruiter keyword and boolean searches for candidates. We show you your eligibility for a given job opportunity based on an analysis of hard skills, soft skills, buzz words and other keyword and present you with an opportunity to boost your CV Chances before yo apply
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <aside class="bg-dark">
+        <div class="container text-center">
+            <div class="call-to-action">
+                <h2>You're more likely to be rejected if your CV is not a good match for the job description</h2>
+                <a class="btn btn-default btn-xl sr-button">What does the job Match Rate Report mean for you?</a>
+            </div>
+        </div>
+    </aside>
+
+	<script>
+		$(document).ready(function(){
+			$('.owl-carousel').owlCarousel({
+				loop:true,
+				margin:10,
+				nav:true,
+				autoplay:true,
+				autoplayTimeout:1500,
+				responsive:{
+					0:{
+						items:1
+					},
+					600:{
+						items:2
+					},
+					1000:{
+						items:3
+					}
+				}
+			})
+		})
+		
+    </script>
+</body>
+</html>
